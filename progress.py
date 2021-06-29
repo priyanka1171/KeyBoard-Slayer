@@ -57,15 +57,17 @@ def f11():
 			else:
 				prog_tree.insert('','end',values=i,tags=("noo",))
 		prog_tree.tag_configure("yess",foreground="black",background="thistle1")
-
+		C5.itemconfig(prog_speed, text=prg_spd)
+		C5.itemconfig(prog_accuracy, text=prg_acc)
+		C5.itemconfig(prog_rank, text=prg_rank)
 	except Exception as e:
-		showerror("Issue",e)
+		#showerror("Issue",e)
+		C5.itemconfig(prog_speed, text="NA")
+		C5.itemconfig(prog_accuracy, text="NA")
+		C5.itemconfig(prog_rank, text="NA")
 	finally:
 		if con is not None:
 			con.close()
-	C5.itemconfig(prog_speed, text=prg_spd)
-	C5.itemconfig(prog_accuracy, text=prg_acc)
-	C5.itemconfig(prog_rank, text=prg_rank)
 
 def graph():
 	name = usrnm
@@ -153,10 +155,10 @@ finally:
 progress=Tk()
 progress.title("Progress")
 progress.geometry("800x600+300+50")
-graph_wall = PhotoImage(file="g4.png")
-small_logo = PhotoImage(file="small_logo.png")
-prog_logo = PhotoImage(file="prog_logo.png")
-header_bg = PhotoImage(file="head.png")
+graph_wall = PhotoImage(file="Images/g4.png")
+small_logo = PhotoImage(file="Images/small_logo.png")
+prog_logo = PhotoImage(file="Images/prog_logo.png")
+header_bg = PhotoImage(file="Images/head.png")
 C5 = Canvas(progress, width=800, height=600, bg="white")
 C5.create_image(400, 24, image=header_bg)
 C5.create_image(743, 24, image=small_logo)

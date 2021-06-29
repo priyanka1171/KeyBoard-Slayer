@@ -67,20 +67,19 @@ def f10():
 	ent_confrmpassword.delete(0,END)
 	ent_setusername.focus()
 
-
-
 #----------------------------------------------------------------------------------------
+
 signup=Tk()
 signup.title("SignUp page")
 signup.geometry("800x600+300+50")
 fb=("Arial Rounded MT Bold",29,"normal")
 fc=("Arial", 18, "normal")
 fd=("Arial Rounded MT", 20, "bold")
-check_logo = PhotoImage(file="checkin.png")
-filename1 = PhotoImage(file="texture.png")
-sign_logo = PhotoImage(file="sign.png")
-user_logo = PhotoImage(file="username.png")
-password_logo = PhotoImage(file="lock.png")
+check_logo = PhotoImage(file="Images/checkin.png")
+filename1 = PhotoImage(file="Images/texture.png")
+sign_logo = PhotoImage(file="Images/sign.png")
+user_logo = PhotoImage(file="Images/username.png")
+password_logo = PhotoImage(file="Images/lock.png")
 
 C2 = Canvas(signup, width=800, height=600)
 C2.create_image(400, 300, image=filename1)
