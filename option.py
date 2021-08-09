@@ -37,12 +37,12 @@ option.geometry("800x600+300+50")
 
 wall = PhotoImage(file="Images/option.png")
 wall2 = PhotoImage(file="Images/grey.png")
-C3 = Canvas(option,bg="White",width=800, height=600)
+C3 = Canvas(option,bg="white",width=800, height=600)
 C3.create_image(535, 300, image=wall2)
 C3.create_image(130, 300, image=wall)
-C3.create_text(535, 60, text="~~~ INSTRUCTIONS ~~~", font=("Monotype Corsiva",20,"bold"), fill="magenta4")
+C3.create_text(535, 60, text="~~~ INSTRUCTIONS ~~~", font=("Monotype Corsiva",20,"bold"), fill="magenta4") 
 
-btn_progress=Button(option,text="Progress",width=10,font=fd,command=f11)
+btn_progress=Button(option,text="Progress",width=10,font=fd,command=f11) #this is for button
 btn_profile=Button(option,text="Profile",width=10,font=fd, command=f14)
 btn_ttest=Button(option,text="Take Test",width=10,font=fd,command=f16)
 btn_ptest=Button(option,text="Practice",width=10,font=fd,command=f8)
